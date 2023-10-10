@@ -1,0 +1,41 @@
+{
+  "name": "hfex-external-configuration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "update": "node update.js -u",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && rollup -c --bundleConfigAsCjs"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "keywords": [],
+  "author": "UzumakiHan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.22.20",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@types/node": "^20.7.1",
+    "core-js": "^3.33.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "rollup": "^3.23.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.2.2"
+  }
+}
